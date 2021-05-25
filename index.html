@@ -11,11 +11,11 @@
     <h1>Welcome to Dine Concierge</h1>
     
     <div class="row">
-        <div class="column1">
-            <div>
+        <aside class="column1">
+            <form name="new_user_form">
                 <h1>User Sign in  </h1>
 
-                <form id="new-user-form">
+                
                     <input type="email" name="email" placeholder="enter email address"></br>
                     <input type="text" name="name" placeholder="enter your name"></br>
                     <input type="submit" value="Sign in">
@@ -25,9 +25,9 @@
             <br>
             <br>
 
-            <div id="restaurant_search">
+            <form id="restaurants_search" >
 
-                <select id="select-state", placeholder="Pick a state...", onChange="selectedState(this);" >
+                <select id="states" name="states" placeholder="Pick a state..." >
                     <option value="">Select a state...</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -85,54 +85,60 @@
                 <button onclick = "reloadSelectElement()"> 
                   clear selection
                 </button> 
-            </div>   
+            </form>   
+    
 
-            <div id="restaurants_results">
+            <section id="restaurants_results">
                 
-                <h3 id="restaurant-heading"></h3>
-
-                <ul id ="restaurant-list"></ul>
-            
-            </div>
-        </div>
-
-        <div class="column2">
-            
-            <div id="restaurant_details">
-
-                <h3 id="restaurantDetail-heading"></h3>
+                <h3></h3>
                 
-                <ol id ="restaurantDetailed-info"></ol>
-
-            </div>
-            
-            <div id="reservation_form">
+                <ul></ul>
                 
+            </section>
+        </aside>
+
+        <main class="column2">
+            
+            <h1 title=music></h1>
+            
+
+            <a id="phone"></a>
+            website: <a id="website"></a>
+            hours: <time id="time"></time> 
+            price range:
+            reserveButton.innerHTML = "Reserve Restaurant"
+
+
+            
+            <form id="new_reservation_form" name="new_reservation_form">
+                <input type="hidden" name="reservation[id]" >
+                <input id="reservation[restaurant_name]" name="reservation[restaurant_name]"  ><br>
                 <h2> Select a date and Time for your reservation</h2>
-                <form id="new-reservation-form">
-                    <input type="text" name="restaurant_name" value="Restaurant Name"><br>
-                    <input type="datetime-local" name="booked_time" value="2021-01-01T11:59" ><br>
-                    <!-- <input type="email" name="booked_email" value="Enter your email"><br> -->
-                    <!-- <input type="text" name="notes" value="Enter your reservation notes"> -->
-                    <br><br>
-                    <textarea name="notes" style="width:200px; height:250px;">Enter your reservation notes</textarea>
-                    <input type="submit" value="Submit">
-                </form>
+                
+                <input type="datetime-local" name="reservation[booked_time]" value="2021-01-01T11:59" ><br>
+                <!-- <input type="email" name="booked_email" value="Enter your email"><br> -->
+                <br><br>
+                <textarea name="reservation[notes]" style="width:200px; height:250px;">Enter your reservation notes</textarea>
+                <input type="submit" value="Submit">
+                <input type="hidden" name="reservation[user_id]"/>
+                
+            </form>
 
-            </div>
+            <section  id="reserved_restaurants">
 
-            <div id="reserved_restaurants">
+                <h3></h3>
 
-                <h3 id="reserved-heading"></h3>
+                <ol ></ol>
 
-                <ol id ="reserved-list"></ol>
-
-            </div>
-        </div>
+            </section>
+        </main>
 
     </div>
    
-
-    <script src="./src/index.js"></script>
+    <script type="text/javascript" src="./src/user.js"></script>
+    <script type="text/javascript" src="./src/reservation.js"></script>
+    <script type="text/javascript" src="./src/ApiService.js"></script>
+    <script type="text/javascript" src="./src/DocuMenuService.js"></script>
+    <script type="text/javascript" defer src="./src/index.js"></script>
 </body>
 </html>
