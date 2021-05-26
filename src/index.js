@@ -16,10 +16,26 @@ reservation.addEventListener("submit", rsvp )
 
 async function getNewUser(event) {
     event.preventDefault()
-    
-    let response = await api.createNewUser(new FormData(event.target))
 
+    let response = await api.createNewUser(new FormData(event.target))
+    .then(response => {
+        console.log("response", response)
+        if(!response.error) {
+
+            const {user} = response
+            let currentUser = user
+            hideUserForm()
+            const hiddenUserId = document.querySelector(".hidden_user_id")
+            hiddenUserId.value = currentUser.id
+        }
+    })
+    
     newUserForm.reset();   
+   
+}
+
+function hideUserForm() {
+    newUserForm.style.display = "none";
 }
 
 states.addEventListener('change', selectState)
@@ -61,7 +77,6 @@ function list(restaurants){
 }
     
 async function viewRestaurantDetails(event) {
-
     
     const restaurantId = event.target.closest("li").id
     
@@ -73,18 +88,21 @@ async function viewRestaurantDetails(event) {
             main = document.querySelector("main")
         ,   heading = main.querySelector ("h1")
         ,   phone = main.querySelector("#phone")
+        ,   website = main.querySelector("#website")
         ,   restaurantName = main.querySelector("[name='reservation[restaurant_name]']")
-    const reservedList = document.getElementById("reserved-list")
-    const reservedHeading = document.getElementById("reserved-heading")
-    
-    const restaurantList =  main.querySelector ("ul")
+        ,   restuarantHours = document.getElementById("openHours")
+        ,   priceRange = document.getElementById("reservation[price_range]")
+        ,   reservedList = document.getElementById("reserved-list")
+        ,   reservedHeading = document.getElementById("reserved-heading")
+        ,   restaurantList =  main.querySelector ("ul")
     
     heading.textContent = restaurant.restaurant_name
         
     phone.textContent = restaurant.restaurant_phone
     phone.href =`tel:${restaurant.restaurant_phone}` 
     restaurantName.value = restaurant.restaurant_name 
-    
+    website.href = restaurant.restaurant_website
+    restuarantHours.innerHTML = restaurant.hours
     
 }
         
@@ -92,29 +110,12 @@ async function viewRestaurantDetails(event) {
         selectElement.selectedIndex = 0
     }
 
-
-    // function handleResDetailViewClick(e) {
-    //     switch (e.taget.className) {
-    //         case "restaurants-list"
-    //         getRestaurant(e.target.dataset.id)
-    //         break
-    //         default:
-    //             return 
-    //     }
-    // }
-
-    // function getRestaurant(id) {
-    //     const mainDisplayDiv = document.getElementById("restaurant_details")
-    // }
-
-
     function rsvp(event) {
         event.preventDefault()
         const form = event.target
         var formData = new FormData(form)
        
         api.submitResevationData(formData)
-
     }
 
     function newReservation(newUser){
@@ -123,6 +124,8 @@ async function viewRestaurantDetails(event) {
             event.preventDefault()
             console.log("newReservation", event.target)
             submitReservationData(event.target, newUser)
+            console.log( "you are here")
+            debugger
         })
     }
     
@@ -134,10 +137,11 @@ async function viewRestaurantDetails(event) {
         .catch(function(error) {
             alert("Please ensure all the fields are completed to reserve your restaurant");
             console.log(error.message)
+            debugger
         })
     }
     
-//     function getAllReservations(){
+// function getAllReservations(){
 //         const restRes = api.get("/reservations")
 //         .then(reservations => {
 //             const resHeading = document.createElement('h3')

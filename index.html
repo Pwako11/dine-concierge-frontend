@@ -9,20 +9,18 @@
 </head>
 <body>
     <h1>Welcome to Dine Concierge</h1>
-    
-    <div class="row">
+    <div class="Container">
+        
         <aside class="column1">
             <form name="new_user_form">
-                <h1>User Sign in  </h1>
-
-                
+                <h1>User Sign in</h1>              
                     <input type="email" name="email" placeholder="enter email address"></br>
                     <input type="text" name="name" placeholder="enter your name"></br>
                     <input type="submit" value="Sign in">
-                </form>
-
-            </div>
+            </form>
             <br>
+
+            <h3 id="userWelcome"></h3>
             <br>
 
             <form id="restaurants_search" >
@@ -83,7 +81,7 @@
                 </select>
                 
                 <button onclick = "reloadSelectElement()"> 
-                  clear selection
+                clear selection
                 </button> 
             </form>   
     
@@ -99,28 +97,27 @@
 
         <main class="column2">
             
-            <h1 title=music></h1>
+            <h1 title=heading></h1>
             
-
-            <a id="phone"></a>
-            website: <a id="website"></a>
-            hours: <time id="time"></time> 
-            price range:
-            reserveButton.innerHTML = "Reserve Restaurant"
-
+            <a id="phone"></a><br>
+            website: <a id="website"></a><br>
+            hours: <time id="openHours"></time> <br>
+            price range: <meter id="reservation[price_range]" min="0" low="40" high="90" max="100" value="reservation[price_range]"></meter>
+            <!-- reserveButton.innerHTML = "Reserve Restaurant" -->
 
             
-            <form id="new_reservation_form" name="new_reservation_form">
+            <form id="new_reservation_form" name="new_reservation_form" >
                 <input type="hidden" name="reservation[id]" >
+                <input type="hidden" id="reservation[user_id]" name="reservation[user_id]" class="hidden_user_id">
                 <input id="reservation[restaurant_name]" name="reservation[restaurant_name]"  ><br>
                 <h2> Select a date and Time for your reservation</h2>
                 
                 <input type="datetime-local" name="reservation[booked_time]" value="2021-01-01T11:59" ><br>
                 <!-- <input type="email" name="booked_email" value="Enter your email"><br> -->
                 <br><br>
-                <textarea name="reservation[notes]" style="width:200px; height:250px;">Enter your reservation notes</textarea>
+                <textarea name="reservation[notes]" style="width:200px; height:250px;" placeholder="Enter your reservation notes"></textarea><br>
                 <input type="submit" value="Submit">
-                <input type="hidden" name="reservation[user_id]"/>
+                
                 
             </form>
 
@@ -132,7 +129,6 @@
 
             </section>
         </main>
-
     </div>
    
     <script type="text/javascript" src="./src/user.js"></script>

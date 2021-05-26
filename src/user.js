@@ -7,7 +7,7 @@ class User {
     }
 
     addUserToDom(){
-        const hidden = document.querySelector(".hidden-user-id")
+        const hidden = document.querySelector(".hidden_user_id")
         hidden.value = this.id
     }
 
