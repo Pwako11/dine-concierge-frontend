@@ -9,13 +9,8 @@ class ApiService {
     }
 
     getAllReservations() {
-        return fetch(this.reservationsUrl)
+        return fetch(this.baseUrl + "/reservations")
         .then(response => response.json())
-        .then(response => {
-            response.forEach(reservation =>{
-                const newReservation = new Reservations(reservation)
-            })
-        })
     }
 
     createNewUser(user) {
@@ -40,15 +35,18 @@ class ApiService {
             body: reservation
         }
     
+        console.log("SUbmit ",this.baseUrl)
         return fetch(this.baseUrl + "/reservations", configObj)
         .then(response => response.json())
         .then(response => {
             const newReservation = new Reservation(response)
-            
+        })
+        .catch(function(error) {
+            alert("Please ensure all the fields are completed to reserve your restaurant");
         })
     }
 
-    updateReservation(reservation) {
+    updateReservation = (reservation) => {
         let configObj = {
             method: 'PATCH',
                 headers: {
@@ -57,24 +55,26 @@ class ApiService {
                 }, 
                 body: JSON.stringify({reservation: reservation})
         }
+        
 
-        return fetch(this.reservationsUrl + `/${reservation.id}`, configObj)
+        return fetch(this.baseUrl + "/reservations" + `/${reservation.id}`, configObj)
         .then(response => response.json())
-    }
+        }
 
 
-    deleteReservation(reservation){
-     
-        let configObj = {
-            method: 'DELETE',
+        deleteReservation = (reservation) => {
+            let configObj = {
+                method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }, 
                 body: JSON.stringify({reservation: reservation})
             }
-        return fetch(this.reservationsUrl+`/${reservation.id}`, configObj )
+            console.log("delete: ", this.baseUrl + "/reservations" + `/${reservation.id}`)
+        return fetch(this.baseUrl + "/reservations" + `/${reservation.id}`, configObj )
         .then(response => response.json())
+        
     }
     
 }
