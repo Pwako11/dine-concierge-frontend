@@ -144,46 +144,20 @@ async function viewReservationList() {
         .then(reservations => {
             reservations.forEach(reservation => {
                
-                const editButton = document.createElement('button')
                 const deleteButton = document.createElement('button')
-                editButton.innerHTML = "Edit Reservation"
-                console.log("Res Id: ", reservation.id)
-                editButton.addEventListener("click", () => api.updateReservation({ id: reservation.id }))
                 deleteButton.innerHTML = "Delete Reservation"
                 deleteButton.addEventListener("click", () => { deleteReservation(li, reservation) })
 
-
                 p.innerHTML = reservation.restaurant_name + " - " + "Date Booked:" + reservation.booked_time + ",  " + "Reserved by:" + reservation.user.name;
-                
-
-                p.append(editButton)
+             
                 p.append(deleteButton)
                 li.append(p)
                 li.id = reservation.id
                 reservationList.append(li)
-                // const deleteButton = document.createElement('button')
-                // deleteButton.id = reservation.id
-                // deleteButton.innerHTML = "Delete Reservation"
-                // deleteButton.addEventListener("click", deleteReservation)
             })
         })
 
     console.log("#6 show all resevations")
-
-}
-
-function newReservation(newUser) {
-    let newReservationForm = document.getElementById("reservation_form")
-    newReservationForm.addEventListener("submit", function (event) {
-        event.preventDefault()
-        console.log("newReservation", event.target)
-        submitReservationData(event.target, newUser)
-        console.log("you are here")
-
-    })
-}
-
-function updateReservation() {
 
 }
 

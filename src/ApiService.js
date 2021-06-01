@@ -46,22 +46,6 @@ class ApiService {
         })
     }
 
-    updateReservation = (reservation) => {
-        let configObj = {
-            method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }, 
-                body: JSON.stringify({reservation: reservation})
-        }
-        
-
-        return fetch(this.baseUrl + "/reservations" + `/${reservation.id}`, configObj)
-        .then(response => response.json())
-        }
-
-
         deleteReservation = (reservation) => {
             let configObj = {
                 method: 'DELETE',
@@ -75,6 +59,5 @@ class ApiService {
         return fetch(this.baseUrl + "/reservations" + `/${reservation.id}`, configObj )
         .then(response => response.json())
         
-    }
-    
+    }  
 }
