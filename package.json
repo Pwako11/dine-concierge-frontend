@@ -1,0 +1,23 @@
+{
+  "name": "dine-concierge-frontend",
+  "version": "1.0.0",
+  "description": "Dine Concierge",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build css/stylesheets.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pwako11/dine-concierge-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pwako11/dine-concierge-frontend/issues"
+  },
+  "homepage": "https://github.com/Pwako11/dine-concierge-frontend#readme",
+  "dependencies": {
+    "tailwindcss": "^2.1.4"
+  }
+}

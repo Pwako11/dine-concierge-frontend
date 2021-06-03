@@ -35,7 +35,6 @@ class ApiService {
             body: reservation
         }
     
-        console.log("SUbmit ",this.baseUrl)
         return fetch(this.baseUrl + "/reservations", configObj)
         .then(response => response.json())
         .then(response => {

@@ -1,38 +1,36 @@
-body{
-  background-color: bisque;
+@tailwind base;
+@tailwind components;
+
+.btn {
+  @apply px-4 py-2 bg-blue-600 text-white rounded;
 }
 
+@tailwind utilities;
 
+
+body{
+  background-color: rgba(226, 239, 241, 0.651);
+  color: rgb(117, 116, 116);
+}
+
+h1.container {
+  text-align: center;
+  color: #29477e;
+}
 
 *{
   box-sizing: border-box;
 }
-
-/* Create two unequal columns that floats next to each other */
-/* .column2 {
-  column-count: 2;
-  float: right;
-  padding: 40px;
-  /* column-rule-style: solid; */
-} */
-
-/* .left {
-  width: 25%;
-}
-
-.right {
-  width: 75%;
-} */
 
 
 aside {
   width: 40%;
   padding-left: .5rem;
   margin-left: .5rem;
-  float: right;
+  float: left;
   box-shadow: inset 5px 0 5px -5px #29627e;
   font-style: italic;
-  color: #29627e;
+  color: #29477e;
 }
 
 aside > p {
@@ -42,3 +40,20 @@ aside > p {
 p {
   font-family: 'Fira Sans', sans-serif;
 }
+
+
+/* Create two unequal columns that floats next to each other */
+/* .column2 {
+  column-count: 2;
+  float: right;
+  padding: 40px;
+  column-rule-style: solid; 
+} */
+
+/* .left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+} */

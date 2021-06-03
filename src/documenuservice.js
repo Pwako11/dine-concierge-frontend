@@ -6,12 +6,12 @@ class DocuMenuService {
     }
 
     getRestaurants(stateAbbr){
-        return fetch(this.restaurantsUrl + stateAbbr +"/?key=13f89d501cb8105c1e10279570318eeb")
+        return fetch(this.restaurantsUrl + stateAbbr +"/?key=eb3131f29b527829a3249a72c149d9b0")
         .then(response => response.json())
     }
 
     getRestaurant(id) {
-        return fetch(this.restaurantUrl + id  + "/?key=13f89d501cb8105c1e10279570318eeb")
+        return fetch(this.restaurantUrl + id  + "/?key=eb3131f29b527829a3249a72c149d9b0")
         .then(response => response.json())
     }
 }
