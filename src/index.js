@@ -9,14 +9,16 @@ const newUserForm = document.forms.new_user_form
 const states = restaurantSearch.states
     , restaurantHeading = restaurantResults.querySelector("h3")
     , restaurantList = restaurantResults.querySelector("ul")
-    , reservation = document.forms.new_reservation_form;
+    , reservation = document.forms.new_reservation_form
+    , stateOptions = document.getElementById("stateOptions")
 
 const mainColumn = document.getElementsByClassName("column2")
 mainColumn[0].style.visibility = 'hidden'
 
 newUserForm.addEventListener("submit", getNewUser)
 reservation.addEventListener("submit", rsvp)
-states.addEventListener('change', selectState)
+states.addEventListener("change", selectState)
+stateOptions.addEventListener("click", reloadSelectElement)
 
 var currentUser;
 
@@ -83,9 +85,12 @@ function resetSelectBox() {
     states.selectedIndex = 0
 }
 
-function reloadSelectElement(){
-    // states.reload()	
-    restaurantList.innerHTML = "";
+function reloadSelectElement(event){
+    event.preventDefault()
+    console.log("you clicked clear selection")
+    restaurantHeading.innerHTML = ""	
+    restaurantList.innerHTML = ""
+    mainColumn[0].style.visibility = 'hidden'
 }
 
 
