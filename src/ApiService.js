@@ -37,12 +37,6 @@ class ApiService {
     
         return fetch(this.baseUrl + "/reservations", configObj)
         .then(response => response.json())
-        .then(response => {
-            const newReservation = new Reservation(response)
-        })
-        .catch(function(error) {
-            alert("Please ensure all the fields are completed to reserve your restaurant");
-        })
     }
 
         deleteReservation = (reservation) => {

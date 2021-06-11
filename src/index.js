@@ -78,7 +78,6 @@ function list(restaurants) {
         restaurantList.append(li)
     }
     console.log("#3 list restaurants")
-
 }
 
 function resetSelectBox() {
@@ -132,15 +131,25 @@ function showReservationForm() {
     }
 }
 
-function rsvp(event) {
+async function rsvp(event) {
     event.preventDefault()
     const form = event.target
     const formData = new FormData(form)
 
-    api.submitResevationData(formData)
-    console.log("#5 reserve selected restaurant")
-    viewReservationList()
-    form.reset()
+    await api.submitResevationData(formData)
+    .then(response => {
+        if(!response.error){ 
+            const newReservation = new Reservation(response)
+            viewReservationList()
+            console.log("#5 reserve selected restaurant")
+        }else{
+        alert(error.message)
+        }
+    })
+    .catch(function(error) {
+        alert("Please ensure all the fields are completed to reserve your restaurant");
+        console.log(error.message)
+    })    
 }
 
 async function viewReservationList() {
@@ -160,10 +169,8 @@ async function viewReservationList() {
                 deleteButton.innerHTML = "Delete Reservation"
                 deleteButton.addEventListener("click", () => { deleteReservation(li, reserved) })
 
-                console.log("flow Current User global", currentUser.id)
-                console.log("flow Current User local", reserved.user_id)
-
                 if (reservedUser.id === reserved.user_id) {
+                    console.log(" Current User: ", reservedUser.id, " Reserved user: ", reserved.user_id )
                     p.innerHTML = reserved.restaurant_name + " \n " + "Date Booked:" + reserved.booked_time + " \n " + "Reservation Notes:" + reserved.notes +" \n "+ "Reserved by:" + reserved.user.name;
                 
                     p.append(deleteButton)

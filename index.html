@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Let our concierge make all your restaurant reservations">
+    <meta name="robots" content="index,follow">
     <link rel="stylesheet" type="text/css" href="css/stylesheets.css" media="screen"/>
     <title>Dine Concierge</title>
 </head>
 <body>
-    <!-- <img src="public/image/01-unsplash.jpg" alt="top-background"  width="450" height="200"> -->
+    <header class="page-header">
+        <h1>Welcome to Dine Concierge</h1>
+
+        <nav class="menu">
+            <ul>
+              <li><a href="#signup">signup</a></li>
+              <li><a href="#restaurants_search">restaurants by state</a></li>
+              <li><a href="#reserved_restaurants">reservations</a></li>
+            </ul>
+          </nav>
+    </header>
 
     <div class="container">
-        <h1>Welcome to Dine Concierge</h1>
+        
         <aside class="column1">
-            <form name="new_user_form">
+            <form id="signup" name="new_user_form">
                 <h1>User Sign in</h1>              
                     <input type="email" name="email" placeholder="enter email address"></br>
                     <input type="text" name="name" placeholder="enter your name"></br>
-                    <input type="submit" value="Sign in">
+                    <input type="submit" value="Sign in" class="submit">
             </form>
             <br>
 
@@ -86,8 +98,6 @@
     
 
             <section id="restaurants_results">
-
-                <!-- <img src="public/image/02-unsplash.jpg" alt="middle-background" width="200" height="300"> -->
                 
                 <h3></h3>
                 
@@ -107,7 +117,7 @@
          
             <form id="new_reservation_form" name="new_reservation_form" >
                 <input type="hidden" name="reservation[id]" >
-                <input id="reservation[user_id]" name="reservation[user_id]" class="hidden_user_id">
+                <input type="hidden" id="reservation[user_id]" name="reservation[user_id]" class="hidden_user_id">
                 <input type="hidden" id="reservation[restaurant_name]" name="reservation[restaurant_name]"><br>
               
                 <h2> Select a date and Time for your reservation</h2>
@@ -115,14 +125,12 @@
                 <img src="public/image/calendar-pic.png" alt="calendar" width="100" height="100">
                 
                 <input type="datetime-local" name="reservation[booked_time]" value="2021-01-01T11:59" ><br>
-                <textarea name="reservation[notes]" style="width:200px; height:250px;" placeholder="Enter your reservation notes"></textarea><br>
-                <input type="submit" value="Submit">
-                
+                <textarea name="reservation[notes]" style="width:300px; height:100px;" placeholder="Enter your reservation notes" id="reservationNotes" onfocus="this.value=''" ></textarea><br>
+                <input type="submit" value="Submit" class="submit">
                 
             </form>
 
             <section  id="reserved_restaurants">
-                <!-- <img src="public/image/03-unsplash.jpg" alt="bottom-background"> -->
 
                 <h3></h3>
 
@@ -130,12 +138,19 @@
 
             </section>
         </main>
+        
+        
     </div>
-   
+    
+    <footer class="branding">
+        <small>&copy; 2021 <strong>Dine Concierge </strong></small>
+    </footer>
+    
     <script type="text/javascript" src="./src/user.js"></script>
     <script type="text/javascript" src="./src/reservation.js"></script>
     <script type="text/javascript" src="./src/ApiService.js"></script>
     <script type="text/javascript" src="./src/DocuMenuService.js"></script>
     <script type="text/javascript" defer src="./src/index.js"></script>
 </body>
+
 </html>
