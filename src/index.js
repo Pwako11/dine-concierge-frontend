@@ -1,5 +1,5 @@
 const api = new ApiService
-const restaurants = new DocuMenuService
+const restaurants = new RestaurantService
 
 const newUserForm = document.forms.new_user_form
     , restaurantSearch = document.forms.restaurants_search
@@ -21,6 +21,7 @@ states.addEventListener("change", selectState)
 stateOptions.addEventListener("click", reloadSelectElement)
 
 var currentUser;
+var abbr;
 
 async function getNewUser(event) {
     event.preventDefault()
@@ -48,16 +49,15 @@ function hideUserForm() {
 async function selectState(event) {
     event.preventDefault()
     const states = event.target
-        , state = (states.options[states.selectedIndex].text)
-        , abbr = (states.options[states.selectedIndex].value);
+        , state = (states.options[states.selectedIndex].text);
 
+    abbr = (states.options[states.selectedIndex].value);
     restaurantHeading.textContent = `Here's a list of restaurants in ${state}`
-
+    
     let response = await restaurants
         .getRestaurants(abbr)
-
     console.log("#2 select state")
-    list(response.data)
+    list(response)
     resetSelectBox()
 }
 
@@ -94,35 +94,37 @@ function reloadSelectElement(event){
 
 
 async function viewRestaurantDetails(event) {
-
+    console.log( "Global State", abbr)
     const restaurantId = event.target.closest("li").id
-
-    const { result: restaurant } = await restaurants
-        .getRestaurant(restaurantId)
-
-    const { address } = restaurant
-    const {geo} = restaurant
+    const response  = await restaurants
+        .getRestaurant(restaurantId, abbr)
+        .then(data => { 
+            restaurant = data[0]
+            console.log("here's your data", restaurant)
+            const { address } = restaurant
     
-    const
-        main = document.querySelector("main")
-        , heading = main.querySelector("h1")
-        , stAddress = main.querySelector("h3")
-        , phone = main.querySelector("#phone")
-        , website = main.querySelector("#website")
-        , restaurantName = main.querySelector("[name='reservation[restaurant_name]']")
-        , priceRange = document.getElementById("price_range")
+            console.log( "See addresses info", address)
+            const
+                main = document.querySelector("main")
+                , heading = main.querySelector("h1")
+                , stAddress = main.querySelector("h3")
+                , phone = main.querySelector("#phone")
+                , website = main.querySelector("#website")
+                , restaurantName = main.querySelector("[name='reservation[restaurant_name]']")
+                , priceRange = document.getElementById("price_range")
     
 
-    heading.textContent = restaurant.restaurant_name
-    stAddress.textContent = address.formatted
-    phone.textContent = restaurant.restaurant_phone
-    phone.href = `tel:${restaurant.restaurant_phone}`
-    restaurantName.value = restaurant.restaurant_name
-    website.textContent = restaurant.restaurant_website
-    website.href = `restaurant.restaurant_website`
-    priceRange.value = restaurant.price_range_num
-    console.log("#4 view restaurant")
-    showReservationForm()
+            heading.textContent = restaurant.restaurant_name
+            stAddress.textContent = address.formatted
+            phone.textContent = restaurant.restaurant_phone
+            phone.href = `tel:${restaurant.restaurant_phone}`
+            restaurantName.value = restaurant.restaurant_name
+            website.textContent = restaurant.restaurant_website
+            website.href = `restaurant.restaurant_website`
+            priceRange.value = restaurant.price_range
+            console.log("#4 view restaurant")
+            showReservationForm()
+        })
 }
 
 function showReservationForm() {

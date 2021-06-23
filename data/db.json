@@ -1,0 +1,411 @@
+{
+    "NY":[
+        {"restaurant_name":"Dolce Vita",
+        "restaurant_phone":"(718) 376-8800",
+        "restaurant_website":"www.DolceVita.com",
+        "hours":"",
+        "price_range": 4,
+        "restaurant_id":4060476073969310,
+        "address":{
+            "city":"Brooklyn",
+            "state":"NY",
+            "postal_code":"11223",
+            "street":"547 Kings Highway",
+            "formatted":"547 Kings Highway Brooklyn, NY 11223"
+            },
+        "last_updated":"2020-10-01T11:19:04.583Z"
+        },
+        {
+        "restaurant_name":"Gloria?s West Indian Food",
+        "restaurant_phone":"(718) 778-4852",
+        "restaurant_website":"wwww.gloriasWestIndian.com",
+        "hours":"Sun: 11am-9pm Mon-Thu: 7am-9pm Fri: 7am-11pm Sat: 11am-11pm",
+        "price_range": 5,
+        "restaurant_id":4066412273950876,
+        "address":{
+            "city":"Brooklyn",
+            "state":"NY",
+            "postal_code":"11225",
+            "street":"987 Nostrand Ave",
+            "formatted":"987 Nostrand Ave Brooklyn, NY 11225"
+            },
+        "last_updated":"2020-10-01T11:17:33.661Z"
+        },
+        {
+        "restaurant_name":"Lucky House",
+        "restaurant_phone":"(718) 443-2298",
+        "restaurant_website":"www.luckyHouse.com",
+        "hours":"Mon-Thu: 12pm-11am Fri-Sat: 12pm-12am Sun: 1pm-11pm",
+        "price_range": 7,
+        "restaurant_id":4068382973935197,
+        "address":{
+            "city":"Brooklyn",
+            "state":"NY",
+            "postal_code":"11233",
+            "street":"343 Lewis Ave",
+            "formatted":"343 Lewis Ave Brooklyn, NY 11233"
+            },
+        "last_updated":"2020-10-01T11:17:41.947Z"
+        },
+        {
+        "restaurant_name":"No 1 Chinese Restaurant",
+        "restaurant_phone":"(718) 363-3639",
+        "restaurant_website":"www.1chineseplace.com",
+        "hours":"Mon-Thu: 11:30am-12am Fri-Sat: 11:30am-1am Sun: 12pm-12am",
+        "price_range": 8,
+        "restaurant_id":4067290173921921,
+        "address":{
+            "city":"Brooklyn",
+            "state":"NY",
+            "postal_code":"11233",
+            "street":"479 Ralph Ave",
+            "formatted":"479 Ralph Ave Brooklyn, NY 11233"
+            },
+        "last_updated":"2020-10-01T11:17:43.049Z"
+        },
+        {
+        "restaurant_name":"New Wing Cheung",
+        "restaurant_phone":"(718) 629-3032",
+        "restaurant_website":"www.newwingcheung.com",
+        "hours":"Mon-Thu: 11:30am-11:30pm Fri-Sat: 11am-11:30pm Sun: 12pm-10pm",
+        "price_range": 6,
+        "restaurant_id":4064217773932533,
+        "address":{
+            "city":"Brooklyn",
+            "state":"NY",
+            "postal_code":"11203",
+            "street":"4621 Avenue D",
+            "formatted":"4621 Avenue D Brooklyn, NY 11203"
+            },
+        "last_updated":"2020-10-01T11:17:45.778Z"
+        }
+    ],
+    "DC":[
+    {
+    "restaurant_name":"China Sun",
+    "restaurant_phone":"(718) 647-2322",
+    "restaurant_website":"www.chinasun.com",
+    "hours":"Mon-Thu: 11am-11pm Fri-Sat: 11am-12am Sun: 12pm-11pm",
+    "price_range": 5,
+    "restaurant_id":4067694973880700,
+    "address":{
+        "city":"Washington",
+        "state":"DC",
+        "postal_code":"11208",
+        "street":"787 Liberty Ave",
+        "formatted":"787 Liberty Ave Washington, DC 11208"
+        },
+    "last_updated":"2020-10-01T11:17:47.898Z"
+    },
+    {
+    "restaurant_name":"Olieng",
+    "restaurant_phone":"(718) 638-1655",
+    "restaurant_website":"www.Oliengfoods.com",
+    "hours":"Daily: 12pm-10:30pm",
+    "price_range": 4,
+    "restaurant_id":4067616673974674,
+    "address":{
+        "city":"Washington",
+        "state":"DC",
+        "postal_code":"11217",
+        "street":"52 7th Ave",
+        "formatted":"52 7th Ave Washington, DC 11217"
+        },
+    "last_updated":"2020-10-01T11:17:53.558Z"
+    },
+    {
+    "restaurant_name":"Casa Malinche",
+    "restaurant_phone":"(347) 587-5077",
+    "restaurant_website":"www.CasaMalinche.com",
+    "hours": "4",
+    "price_range": 4,
+    "restaurant_id":4058111273960155,
+    "address":{
+        "city":"Washington",
+        "state":"DC",
+        "postal_code":"11235",
+        "street":"3078 Coney Island Ave",
+        "formatted":"3078 Coney Island Ave Washington, DC 11235"
+        },
+    "last_updated":"2020-10-01T11:19:28.155Z"
+    },
+    {
+    "restaurant_name":"A Gusto Thai Bistro",
+    "restaurant_phone":"(347) 533-9961",
+    "restaurant_website":"www.AGustoThaiBistro.com",
+    "hours":"",
+    "price_range": 5,
+    "restaurant_id":4067993873942834,
+    "address":{
+        "city":"Washington",
+        "state":"DC",
+        "postal_code":"11216",
+        "street":"1450 Fulton St",
+        "formatted":"1450 Fulton St Washington, DC 11216"
+        },
+    "last_updated":"2020-10-01T11:19:40.971Z"
+    },
+    {
+    "restaurant_name":"Feast Corner",
+    "restaurant_phone":"(718) 975-8224",
+    "restaurant_website":"www.FeastCorner.com",
+    "hours":"",
+    "price_range": 9,
+    "restaurant_id":4066374573931017,
+    "address":{
+        "city":"Washington",
+        "state":"DC",
+        "postal_code":"11213",
+        "street":"425 Utica Ave",
+        "formatted":"425 Utica Ave Washington, DC 11213"
+        },
+    "last_updated":"2020-10-01T11:19:43.271Z"
+    }
+    ],
+    "FL":[
+    {
+    "restaurant_name":"Cousin's Pizzeria",
+    "restaurant_phone":"(718) 921-3030",
+    "restaurant_website":"www.Cousin'sPizzeria.com",
+    "hours":"",
+    "price_range": 6,
+    "restaurant_id":4062197674025735,
+    "address":{
+        "city":"Miami",
+        "state":"FL",
+        "postal_code":"11209",
+        "street":"8504 5th Ave",
+        "formatted":"8504 5th Ave Miami, FL 11209"
+        },
+    "last_updated":"2020-10-01T11:20:03.486Z"
+    },
+    {
+    "restaurant_name":"Healthy Fresh",
+    "restaurant_phone":"(718) 618-7200",
+    "restaurant_website":"www.HealthyFresh.com",
+    "hours":"",
+    "price_range": 9,
+    "restaurant_id":4085518573886835,
+    "address":{
+        "city":"Miami",
+        "state":"FL",
+        "postal_code":"10458",
+        "street":"621 E 187th St",
+        "formatted":"621 E 187th St Miami, FL 10458"
+        },
+    "last_updated":"2020-10-01T11:12:39.640Z" 
+    },
+    {
+    "restaurant_name":"El Nuevo Valle Restaurant",
+    "restaurant_phone":"(718) 294-4222",
+    "restaurant_website":"www.ElNuevoValleRestaurant.com",
+    "hours":"",
+    "price_range": 7,
+    "restaurant_id":4084866473911175,
+    "address":{
+        "city":"Miami",
+        "state":"FL",
+        "postal_code":"10453",
+        "street":"1846 Jerome Ave",
+        "formatted":"1846 Jerome Ave Miami, FL 10453"
+        },
+    "last_updated":"2020-10-01T11:12:48.077Z"
+    },
+    {
+    "restaurant_name":"The Miami Pizzeria and Restaurant",
+    "restaurant_phone":"(347) 691-3606",
+    "restaurant_website":"http://www.themiamixpizzeria.com",
+    "hours":"",
+    "price_range": 7,
+    "restaurant_id":4082953173824811,
+    "address":{
+        "city":"Miami",
+        "state":"FL",
+        "postal_code":"10465",
+        "street":"3579 E Tremont Ave",
+        "formatted":"3579 E Tremont Ave Miami, FL 10465"
+        },
+    "last_updated":"2020-10-01T11:12:49.691Z"
+    },
+    {
+    "restaurant_name":"Khalil Biryani House",
+    "restaurant_phone":"(646) 763-5073",
+    "restaurant_website":"www.Miami536806-khalil-biryani-house.com",
+    "hours":"",
+    "price_range": 5,
+    "restaurant_id":4083556773855180,
+    "address":{
+        "city":"Miami",
+        "state":"FL",
+        "postal_code":"10462",
+        "street":"1445 Olmstead Ave",
+        "formatted":"1445 Olmstead Ave Miami, FL 10462"
+        },
+    "last_updated":"2020-10-01T11:13:01.944Z"
+    }
+    ],
+    "TX":[
+    {
+    "restaurant_name":"Made In Puerto Rico Latin Cuisine",
+    "restaurant_phone":"(718) 684-1309",
+    "restaurant_website":"www.made-in-puerto-rico-latin-cuisine.com",
+    "hours":"",
+    "price_range": 7,
+    "restaurant_id":4083452473829080,
+    "address":{
+        "city":"Dallas",
+        "state":"TX",
+        "postal_code":"10461",
+        "street":"3363 E Tremont Ave",
+        "formatted":"3363 E Tremont Ave Dallas, TX 10461"
+        },
+    "last_updated":"2020-10-01T11:13:03.757Z"
+    },
+    {
+    "restaurant_name":"Fine Food Cuisine",
+    "restaurant_phone":"(718) 822-1991",
+    "restaurant_website":"www.fine-food-cuisine.com",
+    "hours":"",
+    "price_range": 10,
+    "restaurant_id":4084523873867058,
+    "address":{
+        "city":"Dallas",
+        "state":"TX",
+        "postal_code":"10462",
+        "street":"671 Morris Park Ave",
+        "formatted":"671 Morris Park Ave Dallas, TX 10462"
+        },
+    "last_updated":"2020-10-01T11:13:03.853Z"
+    },
+    {
+    "restaurant_name":"Stars Bagels And Pizza",
+    "restaurant_phone":"(914) 591-4321",
+    "restaurant_website":"www.StarsBagelsAndPizza.com",
+    "hours":"",
+    "price_range": 5,
+    "restaurant_id":4101252273846986,
+    "address":{
+        "city":"Dallas",
+        "state":"TX",
+        "postal_code":"10502",
+        "street":"711 Saw Mill River Rd",
+        "formatted":"711 Saw Mill River Rd Dallas, TX 10502"
+        },
+    "last_updated":"2020-10-01T11:09:07.915Z"
+    },
+    {
+    "restaurant_name":"Wild Westchester BBQ Co",
+    "restaurant_phone":"(914) 273-4995",
+    "restaurant_website":"www.wildwestchesterbbq.com",
+    "hours":"",
+    "price_range": 8,
+    "restaurant_id":4112824973713745,
+    "address":{
+        "city":"Dallas",
+        "state":"TX",
+        "postal_code":"10504",
+        "street":"465 Main Street",
+        "formatted":"465 Main Street Dallas, TX 10504"
+        },
+    "last_updated":"2020-10-01T11:09:11.821Z"
+    },
+    {
+    "restaurant_name":"Far East Chinese Restaurant",
+    "restaurant_phone":"(607) 797-1166",
+    "restaurant_website":"www.far-east-chinese-restaurant.com",
+    "hours":"",
+    "price_range": 6,
+    "restaurant_id":4210845675941101,
+    "address":{
+        "city":"Dallas",
+        "state":"TX",
+        "postal_code":"13905",
+        "street":"287 Main Street",
+        "formatted":"287 Main Street Dallas, TX 13905"
+        },
+    "last_updated":"2020-10-01T11:11:22.413Z"
+    }
+    ],
+    "CA":[
+    {
+    "restaurant_name":"KFC",
+    "restaurant_phone":"(718) 515-6155",
+    "restaurant_website":"http://www.kfc.com",
+    "hours":"",
+    "price_range": 4,
+    "restaurant_id":4087372673854103,
+    "address":{
+        "city":"Los Angeles",
+        "state":"CA",
+        "postal_code":"10469",
+        "street":"1125 E Gun Hill Rd",
+        "formatted":"1125 E Gun Hill Rd Los Angeles, CA 10469"
+        },
+    "last_updated":"2020-10-01T11:12:09.936Z"
+    },
+    {
+    "restaurant_name":"City Island Diner",
+    "restaurant_phone":"(718) 885-0362",
+    "restaurant_website":"www.cityislandDiner",
+    "hours":"",
+    "price_range": 6,
+    "restaurant_id":4084712073786444,
+    "address":{
+        "city":"Los Angeles",
+        "state":"CA",
+        "postal_code":"10464",
+        "street":"304 City Island Ave",
+        "formatted":"304 City Island Ave Los Angeles, CA 10464"
+        },
+    "last_updated":"2020-10-01T11:12:10.550Z"
+    },
+    {
+    "restaurant_name":"Venice",
+    "restaurant_phone":"(718) 828-5664",
+    "restaurant_website":"www.venicebeachrestaurant.com",
+    "hours":"",
+    "price_range": 9,
+    "restaurant_id":4083676873857455,
+    "address":{
+        "city":"Los Angeles",
+        "state":"CA",
+        "postal_code":"10462",
+        "street":"1539 Unionport Rd",
+        "formatted":"1539 Unionport Rd Los Angeles, CA 10462"
+        },
+    "last_updated":"2020-10-01T11:12:17.492Z"
+    },
+    {
+    "restaurant_name":"Margherita's Pizza",
+    "restaurant_phone":"(347) 597-4918",
+    "restaurant_website":"www.margheritapizza.com",
+    "hours":"",
+    "price_range": 5,
+    "restaurant_id":4082113073896112,
+    "address":{
+        "city":"Los Angeles",
+        "state":"CA",
+        "postal_code":"10459",
+        "street":"945 E 163rd St",
+        "formatted":"945 E 163rd St Los Angeles, NY 10459"
+        },
+    "last_updated":"2020-10-01T11:12:22.420Z"
+    },
+    {
+    "restaurant_name":"Dunkin'",
+    "restaurant_phone":"(845) 278-2578",
+    "restaurant_website":"https://www.dunkindonuts.com",
+    "hours":"",
+    "price_range": 3,
+    "restaurant_id":4139250073595500,
+    "address":{
+        "city":"Los Angeles",
+        "state":"CA",
+        "postal_code":"10509",
+        "street":"1 Star Ridge Rd",
+        "formatted":"1 Star Ridge Rd Los Angeles, CA 10509"
+        },
+    "last_updated":"2020-10-01T11:11:44.626Z"
+    }
+    ]
+    }
