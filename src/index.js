@@ -22,6 +22,13 @@ stateOptions.addEventListener("click", reloadSelectElement)
 
 var currentUser;
 var abbr;
+let number;
+
+if(true){
+    number= 42
+}
+
+console.log(number)
 
 async function getNewUser(event) {
     event.preventDefault()
@@ -62,21 +69,32 @@ async function selectState(event) {
 }
 
 function list(restaurants) {
+
+    console.log("here are your restaurants", restaurants)
+
+    const sortButton= document.createElement('button')
+    sortButton.innerHTML = "Sort list"
+    sortButton.addEventListener("click", () => {
+        sortRestaurants(restaurants);
+    })
+      
     restaurantList.innerHTML = ""
     for (const restaurant of restaurants) {
         let restaurantURL = restaurant.restaurant_website
         const li = document.createElement('li')
             , p = document.createElement('p')
             , viewMoreButton = document.createElement('button')
-
+            
         p.innerHTML = restaurant.restaurant_name + " - " + "Phone number:" + restaurant.restaurant_phone + ",  " + restaurantURL.link(`${restaurant.restaurant_website}`)
         viewMoreButton.innerHTML = "View More"
         viewMoreButton.addEventListener("click", viewRestaurantDetails)
         p.append(viewMoreButton)
         li.append(p)
         li.id = restaurant.restaurant_id
+        restaurantList.append(sortButton)
         restaurantList.append(li)
     }
+    restaurantList.append(sortButton)
     console.log("#3 list restaurants")
 }
 
@@ -92,6 +110,14 @@ function reloadSelectElement(event){
     mainColumn[0].style.visibility = 'hidden'
 }
 
+function sortRestaurants(restaurants) {
+    restaurants.sort(function(a, b){
+      if(a.restaurant_name < b.restaurant_name) return -1;
+      if(a.restaurant_name > b.restaurant_name) return 1; 
+      return 0; 
+    });
+    list(restaurants)
+}
 
 async function viewRestaurantDetails(event) {
     console.log( "Global State", abbr)
@@ -113,7 +139,6 @@ async function viewRestaurantDetails(event) {
                 , restaurantName = main.querySelector("[name='reservation[restaurant_name]']")
                 , priceRange = document.getElementById("price_range")
     
-
             heading.textContent = restaurant.restaurant_name
             stAddress.textContent = address.formatted
             phone.textContent = restaurant.restaurant_phone
